@@ -10,25 +10,25 @@ docker run -i -t sequenceiq/hoya-docker /etc/bootstrap.sh -bash
 
 The bootsrap script will start Hadoop, YARN and Zookeeper - all these required for HBase/Hoya.
 
-## Creating a HBase cluster with Hoya with 1 Master and 1 RegionServer
+#### Creating a HBase cluster using Hoya with 1 Master and 1 RegionServer
 
 ```
 hoya create hbase --role master 1 --role worker 1 --manager localhost:8032 --filesystem hdfs://localhost:9000 --image hdfs://localhost:9000/hbase.tar.gz --zkhosts localhost --appconf file:///usr/local/hbaseconf
 ```
 
-## Flex the HBase cluster size dynamically
+####Flex the HBase cluster size dynamically
 
 ```
 num_of_workers=4
 hoya flex hbase --role worker $num_of_workers --manager localhost:8032 --filesystem hdfs://localhost:9000
 ```
-## Freeze the HBase cluster
+####Freeze the HBase cluster
 
 ```
 hoya freeze hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
 ```
 
-## Destroy the HBase cluster
+####Destroy the HBase cluster
 
 ```
 hoya destroy hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
