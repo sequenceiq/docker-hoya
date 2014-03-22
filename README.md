@@ -25,7 +25,6 @@ The bootsrap script will start Hadoop, YARN and Zookeeper - all these required f
     --filesystem hdfs://localhost:9000 --image hdfs://localhost:9000/hbase.tar.gz
     --appconf file:///tmp/hoya-master/hoya-core/src/main/resources/org/apache/hoya/providers/hbase/conf
     --zkhosts localhost
-
 ```
 This will launch a 2 node HBase cluster (1 Master and 1 RegionServer). 
 
@@ -34,10 +33,8 @@ This will launch a 2 node HBase cluster (1 Master and 1 RegionServer).
 Now lets increase the number of RegionServers.
 
 ``` bash
-
   num_of_workers=$1
   hoya flex hbase --role worker $num_of_workers --manager localhost:8032 --filesystem hdfs://localhost:9000
-
 ```
 
 This will start as many RegionServers as specified - in new YARN containers. 
@@ -47,9 +44,7 @@ This will start as many RegionServers as specified - in new YARN containers.
 Also the size of the cluster can be decreased if the load on the system does not demand for a larger number of RegionServers. The cluster can also be freezed (Hoya takes care about persisting the state).
 
 ``` bash
-
   hoya freeze hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
-
 ```
 
 ####Destroy the HBase cluster
@@ -57,9 +52,7 @@ Also the size of the cluster can be decreased if the load on the system does not
 Finally when you'd like to destroy the cluster and the state associated with the application you can use:
 
 ``` bash
-
   hoya destroy hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
-
 ```
 
 Enjoy.
