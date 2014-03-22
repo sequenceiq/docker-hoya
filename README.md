@@ -10,7 +10,7 @@ Also the base Hadoop docker image is available as an official [Docker image](htt
 
 
 ```
-docker run -i -t sequenceiq/hoya-docker /etc/bootstrap.sh -bash
+docker run -i -t sequenceiq/hoya-docker /etc/bootstrap-hoya.sh -bash
 ```
 
 The bootsrap script will start Hadoop, YARN and Zookeeper - all these required for HBase/Hoya.
