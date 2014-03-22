@@ -2,7 +2,12 @@ hoya-docker
 ===========
 # Hortonworks Hoya on Docker
 
-This repository contains a Docker file to start with Hortonworks Hoya and HBase (for the image we chooses HBase but any other application with a Hoya provider shoule be OK).
+This repository contains a *docker file* to build a *docker image* with Hortonworks Hoya and HBase (for the image we chooses HBase but any other application with a Hoya provider shoule be OK).
+The Hoya docker file depends on our previous Hadoop docker file/image, available at [SequenceIQ GitHub page](https://github.com/sequenceiq/hadoop-docker). 
+
+Also the base Hadoop docker image is available as an official [Docker image](https://index.docker.io/u/sequenceiq/hadoop-docker).
+
+
 
 ```
 docker run -i -t sequenceiq/hoya-docker /etc/bootstrap.sh -bash
@@ -56,3 +61,5 @@ Finally when you'd like to destroy the cluster and the state associated with the
   hoya destroy hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
 
 ```
+
+Enjoy.
