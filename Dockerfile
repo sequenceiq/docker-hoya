@@ -27,6 +27,8 @@ RUN mkdir /tmp/zookeeper
 
 # add bootstrap-hoya
 ADD bootstrap-hoya.sh /etc/bootstrap-hoya.sh
+RUN chown root:root /etc/bootstrap-hoya.sh
+RUN chmod 700 /etc/bootstrap-hoya.sh
 
 CMD ["/etc/bootstrap-hoya.sh", "-d"]
 
