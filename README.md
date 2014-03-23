@@ -1,6 +1,6 @@
 hoya-docker
 ===========
-# Hortonworks Hoya on Docker
+## Hortonworks Hoya on Docker
 
 This repository contains a *docker file* to build a *docker image* with Hortonworks Hoya and HBase (for the image we chooses HBase but any other application with a Hoya provider shoule be OK).
 The Hoya docker file depends on our previous Hadoop docker file/image, available at [SequenceIQ GitHub page](https://github.com/sequenceiq/hadoop-docker). 
@@ -19,7 +19,7 @@ The bootsrap script will start Hadoop, YARN and Zookeeper - all these required f
 #####Versions
 Hadoop 2.3, Hoya 0.13, HBase 0.98, Zookeeper 3.3.6
 
-#### Creating a HBase cluster using Hoya 
+##### Creating a HBase cluster using Hoya 
 
 ``` bash
 
@@ -31,7 +31,7 @@ Hadoop 2.3, Hoya 0.13, HBase 0.98, Zookeeper 3.3.6
 ```
 This will launch a 2 node HBase cluster (1 Master and 1 RegionServer). 
 
-####Flex the HBase cluster size dynamically
+##### Flex the HBase cluster size dynamically
 
 Now lets increase the number of RegionServers.
 
@@ -42,7 +42,7 @@ Now lets increase the number of RegionServers.
 
 This will start as many RegionServers as specified - in new YARN containers. 
 
-####Freeze the HBase cluster
+##### Freeze the HBase cluster
 
 Also the size of the cluster can be decreased if the load on the system does not demand for a larger number of RegionServers. The cluster can also be freezed (Hoya takes care about persisting the state).
 
@@ -50,7 +50,7 @@ Also the size of the cluster can be decreased if the load on the system does not
   hoya freeze hbase --manager localhost:8032 --filesystem hdfs://localhost:9000
 ```
 
-####Destroy the HBase cluster
+##### Destroy the HBase cluster
 
 Finally when you'd like to destroy the cluster and the state associated with the application you can use:
 
