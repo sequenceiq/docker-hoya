@@ -26,7 +26,7 @@ Hadoop 2.3, Hoya 0.13, HBase 0.98, Zookeeper 3.3.6
   hoya create hbase --role master 1 --role worker 1
     --manager localhost:8032
     --filesystem hdfs://localhost:9000 --image hdfs://localhost:9000/hbase.tar.gz
-    --appconf file:///tmp/hoya-master/hoya-core/src/main/resources/org/apache/hoya/providers/hbase/conf
+    --appconf file:///usr/local/hbaseconf/
     --zkhosts localhost
 ```
 This will launch a 2 node HBase cluster (1 Master and 1 RegionServer). 
