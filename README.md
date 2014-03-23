@@ -2,13 +2,13 @@ hoya-docker
 ===========
 ## Hortonworks Hoya on Docker
 
-This repository contains a *docker file* to build a *docker image* with Hortonworks Hoya and HBase (for the image we chooses HBase but any other application with a Hoya provider shoule be OK).
+This repository contains a *docker file* to build a *docker image* with Hortonworks Hoya and HBase (for the image we choose HBase but any other application with a Hoya provider should be OK).
 The Hoya docker file depends on our previous Hadoop docker file/image, available at [SequenceIQ GitHub page](https://github.com/sequenceiq/hadoop-docker). 
 
 Also the base Hadoop docker image is available as an official [Docker image](https://index.docker.io/u/sequenceiq/hadoop-docker).
 
 
-Now lets start the Hoya docker imaga in his own isolated container (the container will span up a process with its own file system, its own networking, and its own isolated process tree, just like a VM).
+Now lets start the Hoya docker image in his own isolated container (the container will span up a process with its own file system, its own networking, and its own isolated process tree, just like a VM).
 
 ```
 docker run -i -t sequenceiq/hoya-docker /etc/bootstrap-hoya.sh -bash
