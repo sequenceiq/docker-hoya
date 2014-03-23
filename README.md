@@ -8,6 +8,7 @@ The Hoya docker file depends on our previous Hadoop docker file/image, available
 Also the base Hadoop docker image is available as an official [Docker image](https://index.docker.io/u/sequenceiq/hadoop-docker).
 
 
+Now lets start the Hoya docker imaga in his own isolated container (the container will span up a process with its own file system, its own networking, and its own isolated process tree, just like a VM).
 
 ```
 docker run -i -t sequenceiq/hoya-docker /etc/bootstrap-hoya.sh -bash
