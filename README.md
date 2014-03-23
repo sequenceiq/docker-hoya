@@ -16,6 +16,8 @@ docker run -i -t sequenceiq/hoya-docker /etc/bootstrap-hoya.sh -bash
 
 The bootsrap script will start Hadoop, YARN and Zookeeper - all these required for HBase/Hoya.
 
+#####Versions
+Hadoop 2.3, Hoya 0.13, HBase 0.98, Zookeeper 3.3.6
 
 #### Creating a HBase cluster using Hoya 
 
