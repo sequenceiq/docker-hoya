@@ -18,8 +18,8 @@ ADD hbase-site.xml /usr/local/hbaseconf/hbase-site.xml
 ADD log4j.properties /usr/local/hbaseconf/log4j.properties
 
 # zookeeper
-RUN curl -s http://www.eu.apache.org/dist/zookeeper/zookeeper-3.3.6/zookeeper-3.3.6.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s zookeeper-3.3.6 zookeeper
+RUN curl -s http://xenia.sote.hu/ftp/mirrors/www.apache.org/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s zookeeper-3.4.6 zookeeper
 ENV ZOO_HOME /usr/local/zookeeper
 ENV PATH $PATH:$ZOO_HOME/bin
 RUN mv $ZOO_HOME/conf/zoo_sample.cfg $ZOO_HOME/conf/zoo.cfg
